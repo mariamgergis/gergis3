@@ -331,60 +331,60 @@ h5 {
     transform: matrix(1.05, 0, 0, 1.05, -15, 0);
   }
 
-  .footer-social-icons {
-    width: 350px;
-    display:block;
-    margin: 0 auto;
-}
-.social-icon {
-    color: #fff;
-}
-ul.social-icons {
-    margin-top: 10px;
-}
-.social-icons li {
-    vertical-align: top;
-    display: inline;
-    height: 100px;
-}
-.social-icons a {
-    color: #fff;
-    text-decoration: none;
-}
-.fa-facebook {
-    padding:10px 14px;
-    -o-transition:.5s;
-    -ms-transition:.5s;
-    -moz-transition:.5s;
-    -webkit-transition:.5s;
-    transition: .5s;
-    background-color: #322f30;
-}
-.fa-facebook:hover {
-    background-color: #3d5b99;
-}
-.fa-twitter {
-    padding:10px 12px;
-    -o-transition:.5s;
-    -ms-transition:.5s;
-    -moz-transition:.5s;
-    -webkit-transition:.5s;
-    transition: .5s;
-    background-color: #322f30;
-}
-.fa-twitter:hover {
-    background-color: #00aced;
-}
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 40px 0;
+  }
+  .container .box{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin: 5px;
+    background: #cd5ff8;
+    border-radius: 100%;
+  }
+  .container .box .imgBox{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition:0.5s;
+    transition-delay:0.5s;
+  }
+  .container .box:hover .imgBox{
+    transform: scale(0);
+    transition-delay:0.5s;
+  }
+  .container .box .imgBox img{
+    max-width: 100px;
+  }
+  .container .box .content{
+  position: relative;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    border-radius: 100%;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    transition: 0.5s;
+    background:rgba(172, 43, 172, 0.432);
+    transform: scale(0);
+    transition-delay: 0s;
+  }
 
-.fa-github {
-    padding:10px 14px;
-    -o-transition:.5s;
-    -ms-transition:.5s;
-    -moz-transition:.5s;
-    -webkit-transition:.5s;
-    transition: .5s;
-    background-color: #322f30;
-}
-.fa-github:hover {
-    background-color: #5a32a3;
-}
+  .container .box:hover .content{
+    transform: scale(0.8);
+    transition-delay: 0.5s;
+  }
+
+  .container .box .content h4{
+    color: #fff;
+    font-size:16px;
+    line-height: 20px;
+  }
